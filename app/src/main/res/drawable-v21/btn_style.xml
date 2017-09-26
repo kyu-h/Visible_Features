@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- UNSELECTED -->
+    <item android:state_selected="false">
+    </item>
+
+    <!-- SELECTED -->
+    <item android:state_selected="true">
+        <layer-list>
+            <!-- 배경 -->
+            <item>
+                <shape>
+                    <stroke android:width="1dp" android:color="#c4cbd2" />
+                    <corners android:radius="4dp" />
+                    <size android:width="30dp" android:height="18dp" />
+                    <solid android:color="#fff" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
+
+

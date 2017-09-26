@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cam_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+
+        <TabHost
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@android:id/tabhost">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@android:id/tabcontent"
+                    android:layout_weight="1">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tab1"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tab2"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginBottom="20dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:srcCompat="@drawable/ic_zzz"
+                                android:layout_marginBottom="200dp"
+                                android:id="@+id/imageView3"
+                                android:layout_alignParentStart="true" />
+
+                            <ImageButton
+                                android:id="@+id/scroll_up"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_up"
+                                android:onClick="onScrollUp"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="138dp"
+                                android:background="#00000000"/>
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_cctv"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginBottom="65dp"
+                                android:id="@+id/camera"
+                                android:background="#00000000"/>
+
+                            <ImageButton
+                                android:id="@+id/scroll_down"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_down"
+                                android:onClick="onScrollDown"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:background="#00000000"/>
+
+                            <ImageButton
+                                android:id="@+id/scroll_left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_left"
+                                android:onClick="onScrollLeft"
+                                android:layout_alignBottom="@+id/camera"
+                                android:layout_toStartOf="@+id/camera"
+                                android:layout_marginEnd="55dp"
+                                android:background="#00000000"/>
+
+                            <ImageButton
+                                android:id="@+id/scroll_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_right"
+                                android:onClick="onScrollRight"
+                                android:background="#00000000"
+                                android:layout_alignTop="@+id/camera"
+                                android:layout_toEndOf="@+id/camera"
+                                android:layout_marginStart="53dp" />
+
+                            <ImageButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_feed"
+                                android:layout_alignParentBottom="true"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="13dp"
+                                android:id="@+id/ic_feed"
+                                android:layout_toEndOf="@+id/scroll_right"
+                                android:background="#00000000"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tab3"
+                        android:orientation="vertical">
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tab4"
+                        android:orientation="vertical">
+                    </LinearLayout>
+                </FrameLayout>
+                <TabWidget
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@android:id/tabs"/>
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

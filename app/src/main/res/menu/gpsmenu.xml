@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:compat="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.b10718.a0119">
+
+    <item
+        android:id="@+id/action_revert"
+        android:alphabeticShortcut="c"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="초기화"
+        compat:showAsAction="always"
+        tools:ignore="AppCompatResource" />
+    <item
+        android:id="@+id/action_my_location"
+        android:alphabeticShortcut="l"
+        android:icon="@android:drawable/ic_menu_zoom"
+        android:showAsAction="ifRoom"
+        android:title="내 위치" />
+    <item
+        android:id="@+id/action_medicalcenter"
+        android:alphabeticShortcut="m"
+        android:icon="@android:drawable/ic_menu_zoom"
+        android:showAsAction="ifRoom"
+        android:title="주변 병원" />
+    <item
+        android:id="@+id/action_park"
+        android:alphabeticShortcut="m"
+        android:icon="@android:drawable/ic_menu_zoom"
+        android:showAsAction="ifRoom"
+        android:title="주변 공원" />
+    <item
+        android:id="@+id/action_test"
+        android:icon="@android:drawable/ic_menu_more"
+        android:showAsAction="ifRoom"
+        android:title="지도보기">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/action_new_activity"
+                    android:alphabeticShortcut="n"
+                    android:title="New Activity" />
+                <item
+                    android:id="@+id/action_visible_bounds"
+                    android:alphabeticShortcut="v"
+                    android:title="Test Visible Bounds" />
+                <item
+                    android:id="@+id/action_poi_data"
+                    android:alphabeticShortcut="p"
+                    android:title="마커 표시" />
+                <item
+                    android:id="@+id/action_path_data"
+                    android:alphabeticShortcut="t"
+                    android:title="경로선 표시" />
+                <item
+                    android:id="@+id/action_floating_data"
+                    android:alphabeticShortcut="f"
+                    android:title="직접 지정" />
+                <item
+                    android:id="@+id/action_scale_factor"
+                    android:alphabeticShortcut="s"
+                    android:title="지도 크게보기" />
+                <item
+                    android:id="@+id/action_auto_rotate"
+                    android:alphabeticShortcut="t"
+                    android:title="지도 회전" />
+            </group>
+        </menu>
+    </item>
+</menu>

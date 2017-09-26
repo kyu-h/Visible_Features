@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pet_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="20dp">
+
+        <FrameLayout
+            android:id="@+id/pet_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/pet_img"
+                android:layout_width="120.0dp"
+                android:layout_height="120.0dip"
+                android:src="@drawable/ic_action_user"
+                app:border_color="#FF000000" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/info_1"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/pet_info"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/birth"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/breed"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dip"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sex"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/info_1">
+
+            <Button
+                android:id="@+id/editbtn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="수정"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+
+        <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentTop="true">-->
+
+
+        <!--</RelativeLayout>-->
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/relativeLayout"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="등록 번호"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pet_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <!--
+       <RelativeLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_alignParentStart="true"
+           android:layout_centerVertical="true">
+
+           <LinearLayout
+               android:id="@+id/info_2"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_alignParentStart="true"
+               android:orientation="vertical">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+ -->
+</RelativeLayout>

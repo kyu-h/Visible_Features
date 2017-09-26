@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gps_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"><!--
+     Copyright (C) 2012 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+    <!-- This can go anywhere in your layout (see other demos for some examples). -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+
+        <TabHost
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@android:id/tabhost">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@android:id/tabcontent"
+                    android:layout_weight="1">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tab1"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tab2"
+                        android:orientation="vertical">
+                    </LinearLayout>
+
+                    <!--<LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tab3"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/editText"
+                            android:layout_weight="4"
+                            android:hint="Search Location Here" />
+
+                        <Button
+                            android:id="@+id/search_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:onClick="onMapSearch"
+                            android:text="Search" />
+
+                    </LinearLayout>
+
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:tools="http://schemas.android.com/tools"
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:context="com.viralandroid.googlemapsandroidapi.MapsActivity" />-->
+
+                    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:id="@+id/tab3">
+
+                        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                            xmlns:tools="http://schemas.android.com/tools"
+                            android:id="@+id/map"
+                            android:name="com.google.android.gms.maps.SupportMapFragment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:context="com.viralandroid.googlemapsandroidapi.MapsActivity" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/btnPark"
+                                android:text="park"/>
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/btnSchool"
+                                android:text="school"/>
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/btnVeterinary_care"
+                                android:text="Veterinary_care"/>
+
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tab4"
+                        android:orientation="vertical">
+                    </LinearLayout>
+
+
+
+                </FrameLayout>
+
+                <TabWidget
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@android:id/tabs"/>
+
+            </LinearLayout>
+        </TabHost>
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer"/>
+</android.support.v4.widget.DrawerLayout>

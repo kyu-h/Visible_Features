@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string-array name="pet_breed">
+    <item>응디니</item>
+    <item>말티즈</item>
+    <item>골든 리트리버</item>
+    <item>기슈 이누</item>
+    <item>네오폴리탄 마스티프</item>
+    <item>시추</item>
+    <item>불독</item>
+    <item>푸들</item>
+    <item>닥스훈트</item>
+    <item>불테리어</item>
+    <item>포메라니안</item>
+    <item>비숑프리제</item>
+</string-array>
+
+</resources>

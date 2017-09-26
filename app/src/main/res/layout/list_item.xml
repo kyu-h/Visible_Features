@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <FrameLayout
+        android:id="@+id/pet_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:padding="8dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/pet_img"
+            android:layout_width="110.0dp"
+            android:layout_height="110.0dip"
+            android:src="@drawable/ic_action_user"
+            app:border_color="#FF000000" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/info_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_toRightOf="@id/pet_info"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2dip"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/birth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/breed"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2dip"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+   <!-- <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <Button
+            android:id="@+id/dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:src="@drawable/ic_drawer" />
+
+    </RelativeLayout>-->
+</RelativeLayout>
